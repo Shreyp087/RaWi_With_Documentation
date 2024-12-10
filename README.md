@@ -62,7 +62,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. Set Up MySQL Database
+## 4. Set Up MySQL Database & SECRET KEY
 1. Install MySQL if it is not already installed.
 2. Create a database named `gui2r`:
    ```sql
@@ -71,6 +71,8 @@ pip install -r requirements.txt
 3. Update the database credentials in `settings.py`:
    - Set the appropriate database configurations.
    - Change `DEBUG = TRUE`.
+  
+4. Run the SECRET_KEY.py and paste the output of it into the SECRET_KEY="" in the webapp/gui2rapp/settings.py
 
 ---
 
