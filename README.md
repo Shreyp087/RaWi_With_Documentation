@@ -24,11 +24,11 @@ Welcome to the RaWi Repository setup guide. Follow the steps below to set up the
 ## 1. Clone the Repository
 Clone the repository using the following command:
 ```bash
-git clone https://github.com/RaWi-Prototyping/RaWi
+git clone https://github.com/Shreyp087/RaWi_With_Documentation.git
 ```
 Navigate to the cloned project directory:
 ```bash
-cd RaWi
+cd RaWi_With_Documentation
 ```
 
 ---
@@ -50,7 +50,7 @@ cd RaWi
     ```
 - or Can use:
     ```bash
-    $env:PYTHONPATH = "$env:PYTHONPATH;PATH\to\Rawi\gui2r"
+    $env:PYTHONPATH = "$env:PYTHONPATH;PATH\to\RaWi_With_Documentation\gui2r"
     ```
 ---
 
