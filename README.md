@@ -68,7 +68,7 @@ pip install -r requirements.txt
    ```sql
    CREATE DATABASE gui2r;
    ```
-3. Update the database credentials in `settings.py`:
+3. Update the database credentials in `settings.py` in webapp/gui2rapp/settings.py:
    - Set the appropriate database configurations.
    - Change `DEBUG = TRUE`.
   
@@ -77,7 +77,7 @@ pip install -r requirements.txt
 ---
 
 ## 5. Check Django Configuration
-Run the following command to verify the Django configuration:
+Run the following command to verify the Django configuration located at `webapp/manage.py`:
 ```bash
 python3 manage.py check
 ```
@@ -122,7 +122,7 @@ Install any missing modules or fix configuration issues as prompted.
 
 ## 7. Migration
 1. Ensure your MySQL server is running.
-2. Start the migration process:
+2. Start the migration process using `manage.py` located at `webapp/manage.py`:
    ```bash
    python3 manage.py migrate
    ```
