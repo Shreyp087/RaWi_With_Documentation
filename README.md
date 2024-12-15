@@ -76,21 +76,12 @@ pip install -r requirements.txt
 
 ---
 
-## 5. Check Django Configuration
-Run the following command to verify the Django configuration located at `webapp/manage.py`:
-```bash
-python3 manage.py check
-```
-Install any missing modules or fix configuration issues as prompted.
-
----
-
-## 6. Download and Set Up Resources
+## 5. Download and Set Up Resources
 ### a. Word2Vec Files
 - Download Word2Vec files from [GitHub](https://github.com/tmikolov/word2vec).
 - Extract and move the files to:
   - `/gui2r/gui2r/resources/`
-  - `/webapp/gui2rapp/static/resources/`
+  - `/webapp/gui2rapp/staticfiles/resources/`
 
 ### b. RICO Dataset
 - Download the following files from [RICO Quick Downloads](http://www.interactionmining.org/rico.html#quick-downloads):
@@ -100,13 +91,13 @@ Install any missing modules or fix configuration issues as prompted.
   - **UI Screenshots and Hierarchies with Semantic Annotations (150 MB)**
 - Extract and move the files to:
   - `/gui2r/gui2r/resources/`
-  - `/webapp/gui2rapp/static/resources/`
+  - `/webapp/gui2rapp/staticfiles/resources/`
 
 ### c. BERT Model
 - Download the BERT model from [here](https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip).
 - Extract and move the files to:
   - `/gui2r/gui2r/resources/`
-  - `/webapp/gui2rapp/static/resources/`
+  - `/webapp/gui2rapp/staticfiles/resources/`
 
 ### d. Word Embedding
 - Download and install the word embedding from [Google Drive](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
@@ -115,8 +106,17 @@ Install any missing modules or fix configuration issues as prompted.
 ### e. Preproc_txt Directory
 - Create a directory named `preproc_txt` in:
   ```bash
-  /webapp/gui2rapp/static/resources/
+  /webapp/gui2rapp/staticfiles/resources/
   ```
+
+---
+
+## 6. Check Django Configuration
+Run the following command to verify the Django configuration located at `webapp/manage.py`:
+```bash
+python3 manage.py check
+```
+Install any missing modules or fix configuration issues as prompted.
 
 ---
 
