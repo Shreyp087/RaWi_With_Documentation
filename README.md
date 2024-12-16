@@ -103,37 +103,44 @@ pip install -r requirements.txt
 - Extract and move the files to:
   - `/webapp/gui2rapp/staticfiles/resources/`
 
-### d. Word Embedding
-- Download and install the word embedding from [Google Drive](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
-- Create a directory named `embeddings` as per this path `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/` and extract the file into `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/GoogleNews-vectors-negative300.bin`
-- Update the above `GoogleNews-vectors-negative300.bin` file path in the file `RaWi_With_Documentation/gui2r/gui2r/retrieval/ranker/bool_iwcs_ranker.py` in line 190 & 216
 
-
-### e. Preproc_txt Directory
+### d. Preproc_txt Directory
 - Create a directory named `preproc_txt` in:
   ```bash
   /webapp/gui2rapp/staticfiles/resources/
   ```
 
-### f. Nltk files
+### e. Nltk files
 - Run python script nltk_download.py:
   ```bash
   python3 nltk_download.py
   ```
-After step 5 dependency files should be like below
 
-a. webapp/gui2rapp/staticfiles/resources 
+### f. Files check
+- After step 5 dependency files should be like below
+
+  a. webapp/gui2rapp/staticfiles/resources 
  ![Screenshot 2024-12-16 at 1 19 17 PM](https://github.com/user-attachments/assets/417cdd07-fa2c-4871-84ed-d5f91f75bfe4)
  
-b. webapp/gui2r/resources/embeddings/
+  b. webapp/gui2r/resources/embeddings/
 ![Screenshot 2024-12-16 at 1 22 21 PM](https://github.com/user-attachments/assets/671da50c-6ea6-4e74-be9c-20db24faf133)
+
+### g. Copy gui2r Folder 
+- copy gui2r folder to webapp by running below command
+`cp -r gui2r/gui2r webapp/`
+
+### h. Word Embedding
+- Download and install the word embedding from [Google Drive](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
+- Create a directory named `embeddings` as per this path `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/` and extract the file into `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/GoogleNews-vectors-negative300.bin`
+- Update the above `GoogleNews-vectors-negative300.bin` file path in the file `RaWi_With_Documentation/gui2r/gui2r/retrieval/ranker/bool_iwcs_ranker.py` in line 190 & 216
+
 
 ---
 
 ## 6. Check Django Configuration
 Run the following command to verify the Django configuration located at `webapp/manage.py`:
 ```bash
-python3 manage.py check
+python3 webapp/manage.py check
 ```
 Install any missing modules or fix configuration issues as prompted.
 
@@ -143,7 +150,7 @@ Install any missing modules or fix configuration issues as prompted.
 1. Ensure your MySQL server is running.
 2. Start the migration process using `manage.py` located at `webapp/manage.py`:
    ```bash
-   python3 manage.py migrate
+   python3 webapp/manage.py migrate
    ```
    - This step may take **3-4 hours** as it processes data from **72000 files** in the combined and semantic_annotations directories.
    - Running the model may take an additional **3 hours** (~1800 batches).
@@ -153,7 +160,7 @@ Install any missing modules or fix configuration issues as prompted.
 ## 8. Test the Server
 Run the test server with:
 ```bash
-python3 manage.py testserver
+python3 webapp/manage.py testserver
 ```
 - This will create a `test_gui2r` database in MySQL and test the Django configuration.
 
@@ -162,7 +169,7 @@ python3 manage.py testserver
 ## 9. Run the Server
 Start the Django server:
 ```bash
-python3 manage.py runserver
+python3 webapp/manage.py runserver
 ```
 - Tables will be created in the `gui2r` database in MySQL.
 - The project will run on: [http://127.0.0.1:8000](http://127.0.0.1:8000).
