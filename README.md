@@ -59,23 +59,27 @@ Install the required dependencies from the `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
 ```
-- `pkg-config` must be installed on your system.
-  - On Debian/Ubuntu: `sudo apt-get install pkg-config`
-  - On macOS: `brew install pkg-config`
-  - On Fedora: `sudo dnf install pkg-config`
+
 ---
 
 ## 4. Set Up MySQL Database & SECRET KEY
 1. Install MySQL if it is not already installed.
-2. Create a database named `gui2r`:
+   mysql  Ver 9.0.1
+  
+- `pkg-config` must be installed on your system.
+  - On Debian/Ubuntu: `sudo apt-get install pkg-config`
+  - On macOS: `brew install pkg-config`
+  - On Fedora: `sudo dnf install pkg-config`
+
+3. Create a database named `gui2r`:
    ```sql
    CREATE DATABASE gui2r;
    ```
-3. Update the database credentials in `settings.py` in webapp/gui2rapp/settings.py:
+4. Update the database credentials in `settings.py` in webapp/gui2rapp/settings.py:
    - Set the appropriate database configurations.
    - Change `DEBUG = TRUE`.
   
-4. Run the SECRET_KEY.py and paste the output of it into the SECRET_KEY="" in the webapp/gui2rapp/settings.py
+5. Run the SECRET_KEY.py and paste the output of it into the SECRET_KEY="" in the webapp/gui2rapp/settings.py
 
 ---
 
