@@ -108,7 +108,7 @@ pip install -r requirements.txt
 
 ### d. Word Embedding
 - Download and install the word embedding from [Google Drive](https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?usp=sharing).
-- Create a directory named `embeddings` in the main directory and extract the file into `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/GoogleNews-vectors-negative300.bin`
+- Create a directory named `embeddings` as per this path `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/` and extract the file into `RaWi_With_Documentation/webapp/gui2r/resources/embeddings/GoogleNews-vectors-negative300.bin`
 - Update the above `GoogleNews-vectors-negative300.bin` file path in the file `RaWi_With_Documentation/gui2r/gui2r/retrieval/ranker/bool_iwcs_ranker.py` in line 190 & 216
 
 
