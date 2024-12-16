@@ -34,7 +34,7 @@ cd RaWi_With_Documentation
 ---
 
 ## 2. Set Up a Virtual Environment
-- Ensure **Python 3** is installed on your system.
+- Ensure **Python 3.10.10** is installed on your system.
 - Create a virtual environment:
   ```bash
   python3 -m venv venv
