@@ -167,7 +167,7 @@ python3 manage.py runserver
 
 ## 10. Local Modifications for Data Fetching
 ### Adjust Fetch Locations
-Replace the data-fetching URLs from:
+Replace the data-fetching URLs from: Note: Currently fetching URLs are updated in the code.Ignore this step
 ```
 http://rawi-prototyping.com/static/resources/semantic_annotations/1.json
 ```
