@@ -59,7 +59,10 @@ Install the required dependencies from the `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
 ```
-
+- `pkg-config` must be installed on your system.
+  - On Debian/Ubuntu: `sudo apt-get install pkg-config`
+  - On macOS: `brew install pkg-config`
+  - On Fedora: `sudo dnf install pkg-config`
 ---
 
 ## 4. Set Up MySQL Database & SECRET KEY
