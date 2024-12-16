@@ -769,16 +769,16 @@ async function fetchJSONDataFromIndex(
   if (extended || editable) {
     let returnVal = await Promise.all([
       fetch(
-        `http://rawi-prototyping.com/static/resources/combined/${index}.json`
+        `http://127.0.0.1:8000/static/resources/combined/${index}.json`
       ).then((response) => response.json()),
 
       fetch(
-        `http://rawi-prototyping.com/static/resources/semantic_annotations/${index}.json`
+        `http://127.0.0.1:8000/static/resources/semantic_annotations/${index}.json`
       ).then((response) => {
         return response.json();
       }),
       fetch(
-        `http://rawi-prototyping.com/static/resources/combined_extended/${index}.json`
+        `http://127.0.0.1:8000/static/resources/combined_extended/${index}.json`
       ).then((response) => {
         // console.log(response);
         return response ? response.json() : null;
@@ -790,11 +790,11 @@ async function fetchJSONDataFromIndex(
   } else {
     return Promise.all([
       fetch(
-        `http://rawi-prototyping.com/static/resources/combined/${index}.json`
+        `http://127.0.0.1:8000/static/resources/combined/${index}.json`
       ).then((response) => response.json()),
 
       fetch(
-        `http://rawi-prototyping.com/static/resources/semantic_annotations/${index}.json`
+        `http://127.0.0.1:8000/static/resources/semantic_annotations/${index}.json`
       ).then((response) => response.json()),
     ]).then((responses) =>
       fetchAllResponses(index, image, responses, x, y, editable, blank)
@@ -856,12 +856,12 @@ function addGUIToEditor(
     fetchJSONDataFromIndex(this, index, x, y, editable, extended, blank);
     // console.log(this);
   };
-  newImg.src = `http://rawi-prototyping.com/static/resources/combined/${index}.jpg`;
+  newImg.src = `http://127.0.0.1:8000/static/resources/combined/${index}.jpg`;
   //fetchJSONDataFromIndex(this, index, x, y, editable, extended);
 }
 
 function fetchSearchResults(query, method, qe_method, max_results) {
-  return fetch('http://rawi-prototyping.com/gui2r/v1/retrieval', {
+  return fetch('http://127.0.0.1:8000/gui2r/v1/retrieval', {
     method: 'post',
     headers: {
       Accept: 'application/json',
@@ -890,7 +890,7 @@ function searchResultCard(index, rank, conf) {
   return `<div class="col-lg-4 col-md-6 col-6" style="margin-bottom:20px">
       <div style="padding:8px;background-color:#E3E5ED" class="card mb-3 box-shadow">
       <p style="font-size:10px;font-weight:bold;text-align:center;margin-bottom:3px">${rank}.</p>
-      <img class="card-img-top myImages" id="myImg-${index}" src="http://rawi-prototyping.com/static/resources/combined/${index}.jpg" draggable="true" alt="GUI ${index}">
+      <img class="card-img-top myImages" id="myImg-${index}" src="http://127.0.0.1:8000/static/resources/combined/${index}.jpg" draggable="true" alt="GUI ${index}">
             <button id="btn-gui-add-${index}" data-val="${index}" class="btn btn-success p-0" style="width:100%" type="submit">+</button>
   
           </div>`;
