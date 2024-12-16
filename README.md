@@ -116,6 +116,12 @@ pip install -r requirements.txt
   /webapp/gui2rapp/staticfiles/resources/
   ```
 
+### f. Nltk files
+- Run python script nltk_download.py:
+  ```bash
+  python3 nltk_download.py
+  ```
+
 ---
 
 ## 6. Check Django Configuration
