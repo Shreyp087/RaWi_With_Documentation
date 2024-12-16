@@ -120,7 +120,13 @@ pip install -r requirements.txt
   ```bash
   python3 nltk_download.py
   ```
-After step 5 webapp/gui2rapp/staticfiles/resources should have ![Screenshot 2024-12-16 at 1 19 17 PM](https://github.com/user-attachments/assets/417cdd07-fa2c-4871-84ed-d5f91f75bfe4)
+After step 5 dependency files should be like below
+
+a. webapp/gui2rapp/staticfiles/resources 
+ ![Screenshot 2024-12-16 at 1 19 17 PM](https://github.com/user-attachments/assets/417cdd07-fa2c-4871-84ed-d5f91f75bfe4)
+ 
+b. webapp/gui2r/resources/embeddings/
+![Screenshot 2024-12-16 at 1 22 21 PM](https://github.com/user-attachments/assets/671da50c-6ea6-4e74-be9c-20db24faf133)
 
 ---
 
