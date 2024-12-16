@@ -86,8 +86,7 @@ pip install -r requirements.txt
 ## 5. Download and Set Up Resources
 ### a. Word2Vec Files
 - Download Word2Vec files from [GitHub](https://github.com/tmikolov/word2vec).
-- Extract and move the files to:
-  - `/gui2r/gui2r/resources/`
+- Extract and move the folder to:
   - `/webapp/gui2rapp/staticfiles/resources/`
 
 ### b. RICO Dataset
@@ -97,13 +96,11 @@ pip install -r requirements.txt
   - **Play Store Metadata (2 MB)**
   - **UI Screenshots and Hierarchies with Semantic Annotations (150 MB)**
 - Extract and move the files to:
-  - `/gui2r/gui2r/resources/`
   - `/webapp/gui2rapp/staticfiles/resources/`
 
 ### c. BERT Model
 - Download the BERT model from [here](https://storage.googleapis.com/bert_models/2020_02_20/uncased_L-12_H-768_A-12.zip).
 - Extract and move the files to:
-  - `/gui2r/gui2r/resources/`
   - `/webapp/gui2rapp/staticfiles/resources/`
 
 ### d. Word Embedding
